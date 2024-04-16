@@ -1,0 +1,40 @@
+{
+  "version": "v2.11.0",
+  "name": "Transfer",
+  "bytecodeTemplate": "0101030000000db4{3}{4}a3{1}{2}b4{3}{4}110c{0}0100",
+  "fieldsSig": {
+    "names": [
+      "contract",
+      "firstTokenId",
+      "totalSellerFee",
+      "secondTokenId",
+      "totalBuyerFee"
+    ],
+    "types": [
+      "TransferTest",
+      "ByteVec",
+      "U256",
+      "ByteVec",
+      "U256"
+    ],
+    "isMutable": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "functions": [
+    {
+      "name": "main",
+      "usePreapprovedAssets": true,
+      "useAssetsInContract": false,
+      "isPublic": true,
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    }
+  ]
+}

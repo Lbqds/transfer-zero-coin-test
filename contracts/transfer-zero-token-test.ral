@@ -1,0 +1,62 @@
+Contract Token1() {
+    pub fn f() -> () {}
+}
+
+Contract Token2() {
+    pub fn f() -> () {}
+}
+
+Contract FeeCollector() {
+    @using(preapprovedAssets = true, assetsInContract = true, checkExternalCaller = false)
+    pub fn collectFee(
+        from1: Address, tokenId1: ByteVec, amount1: U256,
+        from2: Address, tokenId2: ByteVec, amount2: U256
+    ) -> () {
+        transferToken!(from1, selfAddress!(), tokenId1, amount1)
+        transferToken!(from2, selfAddress!(), tokenId2, amount2)
+    }
+}
+
+Contract TransferTest(feeCollector: FeeCollector) {
+    @using(preapprovedAssets = true, assetsInContract = true, checkExternalCaller = false)
+    pub fn test(
+        firstTokenId: ByteVec,
+        totalSellerFee: U256,
+        buyer: Address,
+        secondTokenId: ByteVec,
+        totalBuyerFee: U256
+    ) -> () {
+        feeCollector.collectFee{
+            selfAddress!() -> firstTokenId: totalSellerFee; 
+            buyer -> secondTokenId: totalBuyerFee
+        }(
+            selfAddress!(), firstTokenId, totalSellerFee,
+            buyer, secondTokenId, totalBuyerFee
+        )
+    }
+
+    @using(preapprovedAssets = true, assetsInContract = true, checkExternalCaller = false)
+    pub fn deposit(tokenId: ByteVec, amount: U256) -> () {
+        transferTokenToSelf!(callerAddress!(), tokenId, amount)
+    }
+}
+
+TxScript Deposit(contract: TransferTest, tokenId: ByteVec, amount: U256) {
+    contract.deposit{callerAddress!() -> tokenId: amount}(tokenId, amount)
+}
+
+TxScript Transfer(
+    contract: TransferTest,
+    firstTokenId: ByteVec,
+    totalSellerFee: U256,
+    secondTokenId: ByteVec,
+    totalBuyerFee: U256
+) {
+    contract.test{callerAddress!() -> secondTokenId: totalBuyerFee}(
+        firstTokenId,
+        totalSellerFee,
+        callerAddress!(),
+        secondTokenId,
+        totalBuyerFee
+    )
+}

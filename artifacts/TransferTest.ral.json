@@ -1,0 +1,69 @@
+{
+  "version": "v2.11.0",
+  "name": "TransferTest",
+  "bytecode": "010240254031010105050012b216001601a3160216031604a3b21600160116021603160413060cce000100010102020004b416001601ac",
+  "codeHash": "7796da3c0835aefe1d6c85d2a226a6903d8dacd0272eebd45f220930d4bfa551",
+  "fieldsSig": {
+    "names": [
+      "feeCollector"
+    ],
+    "types": [
+      "FeeCollector"
+    ],
+    "isMutable": [
+      false
+    ]
+  },
+  "eventsSig": [],
+  "functions": [
+    {
+      "name": "test",
+      "usePreapprovedAssets": true,
+      "useAssetsInContract": true,
+      "isPublic": true,
+      "paramNames": [
+        "firstTokenId",
+        "totalSellerFee",
+        "buyer",
+        "secondTokenId",
+        "totalBuyerFee"
+      ],
+      "paramTypes": [
+        "ByteVec",
+        "U256",
+        "Address",
+        "ByteVec",
+        "U256"
+      ],
+      "paramIsMutable": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "deposit",
+      "usePreapprovedAssets": true,
+      "useAssetsInContract": true,
+      "isPublic": true,
+      "paramNames": [
+        "tokenId",
+        "amount"
+      ],
+      "paramTypes": [
+        "ByteVec",
+        "U256"
+      ],
+      "paramIsMutable": [
+        false,
+        false
+      ],
+      "returnTypes": []
+    }
+  ],
+  "constants": [],
+  "enums": []
+}

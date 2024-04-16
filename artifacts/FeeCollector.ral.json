@@ -1,0 +1,47 @@
+{
+  "version": "v2.11.0",
+  "name": "FeeCollector",
+  "bytecode": "00011601010606000a1600b216011602aa1603b216041605aa",
+  "codeHash": "3424e7f6dcfba905d0e7fc87e1aadef66678ece6696b9e341bb31c3097134cdb",
+  "fieldsSig": {
+    "names": [],
+    "types": [],
+    "isMutable": []
+  },
+  "eventsSig": [],
+  "functions": [
+    {
+      "name": "collectFee",
+      "usePreapprovedAssets": true,
+      "useAssetsInContract": true,
+      "isPublic": true,
+      "paramNames": [
+        "from1",
+        "tokenId1",
+        "amount1",
+        "from2",
+        "tokenId2",
+        "amount2"
+      ],
+      "paramTypes": [
+        "Address",
+        "ByteVec",
+        "U256",
+        "Address",
+        "ByteVec",
+        "U256"
+      ],
+      "paramIsMutable": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "returnTypes": []
+    }
+  ],
+  "constants": [],
+  "enums": []
+}

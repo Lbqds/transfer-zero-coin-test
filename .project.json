@@ -1,0 +1,55 @@
+{
+  "fullNodeVersion": "v2.11.0",
+  "compilerOptionsUsed": {
+    "ignoreUnusedConstantsWarnings": false,
+    "ignoreUnusedVariablesWarnings": false,
+    "ignoreUnusedFieldsWarnings": false,
+    "ignoreUnusedPrivateFunctionsWarnings": false,
+    "ignoreUpdateFieldsCheckWarnings": false,
+    "ignoreCheckExternalCallerWarnings": false
+  },
+  "infos": {
+    "Deposit": {
+      "sourceFile": "transfer-zero-token-test.ral",
+      "sourceCodeHash": "d0db153b3494ddfb57ac78eb45f25bb19b7a3805307814456555916773aa7d26",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "",
+      "warnings": []
+    },
+    "FeeCollector": {
+      "sourceFile": "transfer-zero-token-test.ral",
+      "sourceCodeHash": "d0db153b3494ddfb57ac78eb45f25bb19b7a3805307814456555916773aa7d26",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "3424e7f6dcfba905d0e7fc87e1aadef66678ece6696b9e341bb31c3097134cdb",
+      "warnings": []
+    },
+    "Token1": {
+      "sourceFile": "transfer-zero-token-test.ral",
+      "sourceCodeHash": "d0db153b3494ddfb57ac78eb45f25bb19b7a3805307814456555916773aa7d26",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "928360bf58942dd1fdd8d197e0e2ef59ecddbf71a6e8fe25d2c0665274f80ce3",
+      "warnings": []
+    },
+    "Token2": {
+      "sourceFile": "transfer-zero-token-test.ral",
+      "sourceCodeHash": "d0db153b3494ddfb57ac78eb45f25bb19b7a3805307814456555916773aa7d26",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "928360bf58942dd1fdd8d197e0e2ef59ecddbf71a6e8fe25d2c0665274f80ce3",
+      "warnings": []
+    },
+    "Transfer": {
+      "sourceFile": "transfer-zero-token-test.ral",
+      "sourceCodeHash": "d0db153b3494ddfb57ac78eb45f25bb19b7a3805307814456555916773aa7d26",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "",
+      "warnings": []
+    },
+    "TransferTest": {
+      "sourceFile": "transfer-zero-token-test.ral",
+      "sourceCodeHash": "d0db153b3494ddfb57ac78eb45f25bb19b7a3805307814456555916773aa7d26",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "7796da3c0835aefe1d6c85d2a226a6903d8dacd0272eebd45f220930d4bfa551",
+      "warnings": []
+    }
+  }
+}
